@@ -1,0 +1,24 @@
+- name: Install Packages 
+  apt:
+    name: "{{ item  }}"
+    state: present
+    update_cache: yes 
+  with_items: 
+    - nginx
+    - python3
+    - ufw 
+    - openjdk-17-jre-headless
+  when: ansible_distribution in ['Debian', 'Ubuntu']
+    
+- name: Install Packages for 
+  yum:
+    name: "{{ item  }}"
+    state: present
+    update_cache: yes 
+  with_items: 
+    - nginx
+    - python3 
+    - java-17-openjdk
+  when: ansible_distribution in ['CentOS', 'RedHat']
+
+
