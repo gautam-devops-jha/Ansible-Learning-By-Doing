@@ -4,6 +4,8 @@ Embark on a hands-on journey into the world of DevOps with Ansible! Explore prac
 # Beginner Level Projects:
 
 ### 1. Install Software Packages 
-Going to Write a playbook and a ansible role to install a basic software package (e.g., Nginx, Apache) on a target server.
+Going to write a playbook and a ansible role to install a basic software package (e.g., Nginx, Apache) on a target server.
 
 
+### 2. User Management 
+Going to write a playbook to manage user accounts (create, delete, modify) on multiple servers.
