@@ -1,0 +1,25 @@
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: Create Groups
+      group:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - gautam
+        - admin
+
+    - name: create User
+      user:
+        name: gautam
+        shell: /bin/bash
+        groups: root,gautam,admin
+        append: yes 
+
+    - name: Add ssh key to user 
+      user: 
+        name: gautam 
+        generate_ssh_key: yes 
+        ssh_key_bits: 2048
+        ssh_key_file: ./ssh/id_rsa
+

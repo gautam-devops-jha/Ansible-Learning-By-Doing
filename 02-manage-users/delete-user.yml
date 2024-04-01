@@ -1,0 +1,8 @@
+- hosts: all
+  gather_facts: true 
+  tasks: 
+    - name: Remove user 
+      user: 
+        name: prometheus
+        state: absent 
+        remove: yes 

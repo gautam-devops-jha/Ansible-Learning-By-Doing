@@ -1,0 +1,13 @@
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: create group for user 
+      group: 
+        name: prometheus
+        state: present
+    
+    - name: Create user 
+      user:
+        name: prometheus
+        shell: /bin/false
+        create_home: false
