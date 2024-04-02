@@ -1,0 +1,4 @@
+- name: Sending File to Remote Machine
+  copy:
+    src: my-file.txt
+    dest: /home/my-file.txt
