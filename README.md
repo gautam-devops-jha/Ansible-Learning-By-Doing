@@ -9,3 +9,6 @@ Going to write a playbook and a ansible role to install a basic software package
 
 ### 2. User Management 
 Going to write a playbook to manage user accounts (create, delete, modify) on multiple servers.
+
+### 3. Files Sender
+Going to Develop a playbook to copy files from the Ansible control node to multiple target servers.
