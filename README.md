@@ -11,4 +11,7 @@ Going to write a playbook and a ansible role to install a basic software package
 Going to write a playbook to manage user accounts (create, delete, modify) on multiple servers.
 
 ### 3. Files Sender
-Going to Develop a playbook to copy files from the Ansible control node to multiple target servers.
+Going to Develop a playbook and role to copy files from the Ansible control node to multiple target servers.
+
+### 4. Systemd service Management 
+Going to develop 3 different playbook which will demonstrate how to create systemd file, Start the service and stop the service
