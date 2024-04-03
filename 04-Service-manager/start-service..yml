@@ -1,0 +1,9 @@
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: Start Node-exporter service 
+      service:
+        name: node-exporter
+        state: started
+
+

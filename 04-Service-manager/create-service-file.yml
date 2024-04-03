@@ -1,0 +1,28 @@
+- host: all
+  gather_facts: true 
+  become: true
+  tasks: 
+    - name: Installing Node Exporter Binary
+      unarchive:
+        src: https://github.com/prometheus/node_exporter/releases/download/v1.7.0/node_exporter-1.7.0.linux-amd64.tar.gz
+        dest: /usr/local/bin
+        remote_src: yes 
+    
+    - name: Creating node exporter Service File 
+      copy:
+        content: |
+          [Unit]
+            Description=Node Exporter
+            Wants=network-online.target
+            After=network-online.target
+
+          [Service]
+            User={{ node_exporter_user }}
+            Group={{ node_exporter_group }}
+            Type=simple
+            ExecStart=/usr/local/bin/node_exporter
+
+          [Install]
+            WantedBy=multi-user.target
+        dest: /etc/systemd/system/node-exporter.service 
+        
