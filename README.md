@@ -15,3 +15,6 @@ Going to Develop a playbook and role to copy files from the Ansible control node
 
 ### 4. Systemd service Management 
 Going to develop 3 different playbook which will demonstrate how to create systemd file, Start the service and stop the service
+
+### 5. Firewall Management using UFW
+Going to develop a playbook which allow port 22 annd 8080 to public on remote machine 

@@ -1,0 +1,18 @@
+- hosts: all
+  gather_facts: true 
+  tasks:
+    - name: Installing UFW
+      apt:
+        name: ufw
+        state: present
+        update_cache: yes
+    
+    - name: Enabling Port 8080 and 22
+      ufw:
+        state: enabled
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp 
+      loop:
+        - 22
+        - 8080
