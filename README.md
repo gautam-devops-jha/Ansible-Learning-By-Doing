@@ -18,3 +18,6 @@ Going to develop 3 different playbook which will demonstrate how to create syste
 
 ### 5. Firewall Management using UFW
 Going to develop a playbook which allow port 22 annd 8080 to public on remote machine 
+
+
+# Intermediate Level Projects:
